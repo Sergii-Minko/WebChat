@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && cpx \"src//*\" dist",
+    "build": "rimraf dist && cpx \"src/**\" dist",
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
