@@ -3,6 +3,10 @@ import http from "http";
 import https from "https";
 import { Server } from "socket.io";
 
+const userSocketMap = {
+
+
+};
 
 const app = express();
 const server = http.createServer(app);
@@ -17,7 +21,7 @@ function getReceiverSocketId(userId) {
 
 io.on("connection", (socket) => {
 
-    const userId = socket.hand shake.query.userId;
+    const userId = socket.handshake.query.userId;
     if (userId) userSocketMap[userId] = socket.id;
     io.emit("getOnlineUsers", Object.keys(userSocketMap));
 
